@@ -17,11 +17,7 @@ public class GitRepo {
         return repositoryName;
     }
 
-    public void addBranch(String branch) {
-        this.branches.add(branch);
-    }
-
-    public List<String> getBranches() {
-        return branches;
+    public void setRepositoryName(String repositoryName) {
+        this.repositoryName = repositoryName;
     }
 }
