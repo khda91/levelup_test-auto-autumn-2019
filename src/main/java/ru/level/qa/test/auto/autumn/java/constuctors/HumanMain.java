@@ -6,6 +6,8 @@ public class HumanMain {
         Human vasya = new Human("Vasya", 20, "vasya@ya.ru");
         Human petya = new Human("Petya", 20, "vasya@ya.ru", 68.900);
 
+        Human vova = new Human();
+        vova.setName("Vova");
 
         System.out.println(vasya.getName());
 
