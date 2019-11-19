@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!-- Before Suite -->
+<suite name="Suite 2">
+
+    <!-- Before Test -->
+    <test name="Test 1">
+        <classes>
+            <!-- Before class -->
+            <class name="ru.level.qa.test.auto.autumn.test.framework.tests.CalculatorSumTest">
+                <methods>
+                    <exclude name="negativeDataProviderSumTest"/>
+                </methods>
+            </class>
+            <!-- After Class -->
+            <!-- Before class -->
+            <class name="ru.level.qa.test.auto.autumn.test.framework.tests.CalculatorMultiplyTest">
+                <methods>
+                    <exclude name="negativeDataProviderMultiplyTest"/>
+                </methods>
+            </class>
+            <!-- After Class -->
+        </classes>
+    </test>
+    <!-- After Test -->
+</suite>
+        <!-- After Suite -->
