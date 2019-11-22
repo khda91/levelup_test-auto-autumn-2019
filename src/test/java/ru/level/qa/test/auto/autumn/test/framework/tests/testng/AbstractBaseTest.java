@@ -1,4 +1,4 @@
-package ru.level.qa.test.auto.autumn.test.framework.tests;
+package ru.level.qa.test.auto.autumn.test.framework.tests.testng;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;

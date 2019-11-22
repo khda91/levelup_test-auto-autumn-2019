@@ -6,14 +6,14 @@
     <test name="Test 1">
         <classes>
             <!-- Before class -->
-            <class name="ru.level.qa.test.auto.autumn.test.framework.tests.CalculatorSumTest">
+            <class name="ru.level.qa.test.auto.autumn.test.framework.tests.testng.CalculatorSumTest">
                 <methods>
                     <exclude name="negativeDataProviderSumTest"/>
                 </methods>
             </class>
             <!-- After Class -->
             <!-- Before class -->
-            <class name="ru.level.qa.test.auto.autumn.test.framework.tests.CalculatorMultiplyTest">
+            <class name="ru.level.qa.test.auto.autumn.test.framework.tests.testng.CalculatorMultiplyTest">
                 <methods>
                     <exclude name="negativeDataProviderMultiplyTest"/>
                 </methods>

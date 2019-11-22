@@ -1,10 +1,7 @@
-package ru.level.qa.test.auto.autumn.test.framework.tests;
+package ru.level.qa.test.auto.autumn.test.framework.tests.testng;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import ru.level.qa.test.auto.autumn.test.framework.Calculator;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;

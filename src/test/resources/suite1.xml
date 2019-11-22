@@ -6,10 +6,10 @@
     <test name="Test 1">
         <classes>
             <!-- Before class -->
-            <class name="ru.level.qa.test.auto.autumn.test.framework.tests.CalculatorSumTest"/>
+            <class name="ru.level.qa.test.auto.autumn.test.framework.tests.testng.CalculatorSumTest"/>
             <!-- After Class -->
             <!-- Before class -->
-            <class name="ru.level.qa.test.auto.autumn.test.framework.tests.CalculatorMultiplyTest"/>
+            <class name="ru.level.qa.test.auto.autumn.test.framework.tests.testng.CalculatorMultiplyTest"/>
             <!-- After Class -->
         </classes>
     </test>
