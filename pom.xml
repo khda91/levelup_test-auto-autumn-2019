@@ -15,6 +15,9 @@
 
         <testng.version>7.0.0</testng.version>
         <cucumber.version>4.8.0</cucumber.version>
+        <selenium.version>3.141.59</selenium.version>
+        <hamcrest.version>2.1</hamcrest.version>
+        <webdrivermanager.version>3.7.1</webdrivermanager.version>
 
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
     </properties>
@@ -27,7 +30,27 @@
             <scope>test</scope>
         </dependency>
 
-<!--        <dependency>-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--        <dependency>-->
 <!--            <groupId>io.cucumber</groupId>-->
 <!--            <artifactId>cucumber-java</artifactId>-->
 <!--            <version>${cucumber.version}</version>-->
