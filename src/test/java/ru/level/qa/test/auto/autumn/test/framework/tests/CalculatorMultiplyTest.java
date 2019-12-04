@@ -49,4 +49,9 @@ public class CalculatorMultiplyTest extends AbstractBaseTest {
         double actual = calculator.multiply(a, b);
         assertNotEquals(actual, expected);
     }
+
+    @Test
+    public void assertDeltaTest() {
+        assertEquals(3.41 - 1.40, 2);
+    }
 }

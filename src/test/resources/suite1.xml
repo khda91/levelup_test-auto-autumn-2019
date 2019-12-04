@@ -2,6 +2,10 @@
 <!-- Before Suite -->
 <suite name="Suite 1">
 
+    <listeners>
+        <listener class-name="ru.level.qa.test.auto.autumn.selenium.listeners.TestListener"/>
+    </listeners>
+
     <!-- Before Test -->
     <test name="Test 1">
         <classes>
