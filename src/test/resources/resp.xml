@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:ns1="http://users.bugred.ru/tasks/soap/WrapperSoapServer.php"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+                   SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+    <SOAP-ENV:Body>
+        <ns1:doRegisterResponse>
+            <return xsi:type="SOAP-ENC:Struct">
+                <email xsi:type="xsd:string">hbdvksdvbahdvn1123432e111@email.com</email>
+                <name xsi:type="xsd:string">djndjvdv adlsviaev dsfsadasd11111</name>
+                <avatar xsi:type="xsd:string">http://users.bugred.ru//tmp/default_avatar.jpg</avatar>
+                <password xsi:type="xsd:string">
+                    8ea15870987d34972ee28de0e6b8ad0217970d473bb0414911753e8a1101cec81ba9f6b0db7fec16b2d0b9cd4c91337896ebdaa033b47955f620834761415c44
+                </password>
+                <birthday xsi:type="xsd:int">0</birthday>
+                <gender xsi:type="xsd:string"></gender>
+                <date_start xsi:type="xsd:int">0</date_start>
+                <hobby xsi:type="xsd:string"></hobby>
+                <name1 xsi:type="xsd:string"></name1>
+                <surname1 xsi:type="xsd:string"></surname1>
+                <fathername1 xsi:type="xsd:string"></fathername1>
+                <cat xsi:type="xsd:string"></cat>
+                <dog xsi:type="xsd:string"></dog>
+                <parrot xsi:type="xsd:string"></parrot>
+                <cavy xsi:type="xsd:string"></cavy>
+                <hamster xsi:type="xsd:string"></hamster>
+                <squirrel xsi:type="xsd:string"></squirrel>
+                <phone xsi:type="xsd:string"></phone>
+                <adres xsi:type="xsd:string"></adres>
+                <inn xsi:type="xsd:string"></inn>
+            </return>
+        </ns1:doRegisterResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
