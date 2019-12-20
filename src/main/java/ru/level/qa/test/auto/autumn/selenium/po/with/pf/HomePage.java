@@ -1,5 +1,6 @@
 package ru.level.qa.test.auto.autumn.selenium.po.with.pf;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,6 +20,7 @@ public class HomePage {
         this.driver = driver;
     }
 
+    @Step("Click enter button")
     public void enterButtonClick() {
         enterButton.click();
     }

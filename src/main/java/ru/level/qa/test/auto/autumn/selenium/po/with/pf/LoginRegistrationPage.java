@@ -1,5 +1,6 @@
 package ru.level.qa.test.auto.autumn.selenium.po.with.pf;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,14 +40,17 @@ public class LoginRegistrationPage {
         PageFactory.initElements(driver, this);
     }
 
+    @Step("Enter username '{0}'")
     public void fillLoginTextField(String username) {
         loginTextField.sendKeys(username);
     }
 
+    @Step("Enter password '{0}'")
     public void fillPasswordTextField(String password) {
         passwordTextField.sendKeys(password);
     }
 
+    @Step("Click login button")
     public void authButtonClick() {
         authButton.click();
     }

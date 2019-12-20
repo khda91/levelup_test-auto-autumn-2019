@@ -20,6 +20,11 @@
         <webdrivermanager.version>3.7.1</webdrivermanager.version>
         <common.io.version>2.6</common.io.version>
         <rest-assured.version>4.1.1</rest-assured.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
+        <jackson.version>2.9.9.3</jackson.version>
+        <postgresql.version>42.2.9</postgresql.version>
+        <allure.version>2.13.0</allure.version>
+        <aspectj.version>1.8.10</aspectj.version>
 
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
     </properties>
@@ -67,16 +72,29 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.9</version>
+            <version>${commons-lang3.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.9.3</version>
+            <version>${jackson.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+
         <!--        <dependency>-->
-<!--            <groupId>io.cucumber</groupId>-->
+        <!--            <groupId>io.cucumber</groupId>-->
 <!--            <artifactId>cucumber-java</artifactId>-->
 <!--            <version>${cucumber.version}</version>-->
 <!--        </dependency>-->
@@ -107,10 +125,31 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/PositiveTest.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/resources/NegativeTest.xml</suiteXmlFile>
+<!--                        <suiteXmlFile>src/test/resources/PositiveTest.xml</suiteXmlFile>-->
+<!--                        <suiteXmlFile>src/test/resources/NegativeTest.xml</suiteXmlFile>-->
+                        <suiteXmlFile>src/test/resources/AllureSuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.10.0</version>
+                <configuration>
+                    <reportVersion>${allure.version}</reportVersion>
+                    <resultsDirectory>${project.basedir}/allure-results</resultsDirectory>
                 </configuration>
             </plugin>
 

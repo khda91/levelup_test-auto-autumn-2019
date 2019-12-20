@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Allure Suite with several tests">
+
+    <listeners>
+        <listener class-name="ru.level.qa.test.auto.autumn.selenium.listeners.TestListener"/>
+    </listeners>
+
+    <test name="Page Object Test">
+        <classes>
+            <class name="ru.level.qa.test.auto.autumn.selenium.page.objects.PageObjectWithPageComponentsSeleniumTest"/>
+        </classes>
+    </test>
+</suite>
