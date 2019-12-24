@@ -14,7 +14,6 @@
         <encoding.version>UTF-8</encoding.version>
 
         <testng.version>7.0.0</testng.version>
-        <cucumber.version>4.8.0</cucumber.version>
         <selenium.version>3.141.59</selenium.version>
         <hamcrest.version>2.1</hamcrest.version>
         <webdrivermanager.version>3.7.1</webdrivermanager.version>
@@ -25,6 +24,7 @@
         <postgresql.version>42.2.9</postgresql.version>
         <allure.version>2.13.0</allure.version>
         <aspectj.version>1.8.10</aspectj.version>
+        <cucumber.version>1.2.5</cucumber.version>
 
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
     </properties>
@@ -93,17 +93,23 @@
             <version>${allure.version}</version>
         </dependency>
 
-        <!--        <dependency>-->
-        <!--            <groupId>io.cucumber</groupId>-->
-<!--            <artifactId>cucumber-java</artifactId>-->
-<!--            <version>${cucumber.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber-jvm</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>io.cucumber</groupId>-->
-<!--            <artifactId>cucumber-testng</artifactId>-->
-<!--            <version>${cucumber.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
 
     </dependencies>
 
@@ -125,13 +131,16 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
+                    <reuseForks>true</reuseForks>
+                    <forkCount>0</forkCount>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <suiteXmlFiles>
-<!--                        <suiteXmlFile>src/test/resources/PositiveTest.xml</suiteXmlFile>-->
-<!--                        <suiteXmlFile>src/test/resources/NegativeTest.xml</suiteXmlFile>-->
-                        <suiteXmlFile>src/test/resources/AllureSuite.xml</suiteXmlFile>
+                        <!--                        <suiteXmlFile>src/test/resources/PositiveTest.xml</suiteXmlFile>-->
+                        <!--                        <suiteXmlFile>src/test/resources/NegativeTest.xml</suiteXmlFile>-->
+<!--                        <suiteXmlFile>src/test/resources/AllureSuite.xml</suiteXmlFile>-->
+                        <suiteXmlFile>src/test/resources/CucumberRunner.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
                 <dependencies>
