@@ -2,11 +2,9 @@ package ru.level.qa.test.auto.autumn.cucumber;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
-import org.testng.annotations.Listeners;
 
 @CucumberOptions(tags = "@test1",
-plugin = {"io.qameta.allure.cucumberjvm.AllureCucumberJvm"})
-@Listeners({ScreenshotListener.class})
+        plugin = {"io.qameta.allure.cucumberjvm.AllureCucumberJvm"})
 public class RunAcceptance extends AbstractTestNGCucumberTests {
 
 }

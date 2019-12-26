@@ -2,7 +2,7 @@
 <suite name="Cucumber">
 
     <listeners>
-        <listener class-name="ru.level.qa.test.auto.autumn.cucumber.ScreenshotListener"/>
+        <listener class-name="ru.level.qa.test.auto.autumn.cucumber.listeners.ScreenshotListener"/>
     </listeners>
 
     <test name="Cucumber Test">

@@ -17,4 +17,12 @@ public class ThenSteps {
         String expected = TestContext.getTestData("user_email");
         assertThat(actualUserEmailFromTable, containsStringIgnoringCase(expected+"ajbcascas"));
     }
+
+    @Then("Created user should be the (\\d+)-(?:st|nd|rd|th) in the user table on the Main page")
+    public void createdUserShouldBeFirstOnTheMainPage(int order) {
+        HomePage hp = new HomePage(TestContext.getDriver());
+        String actualUserEmailFromTable = hp.getUserEmailFromTable(order - 1);
+        String expected = TestContext.getTestData("user_email");
+        assertThat(actualUserEmailFromTable, containsStringIgnoringCase(expected));
+    }
 }

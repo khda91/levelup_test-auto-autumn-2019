@@ -20,6 +20,12 @@ public class WhenSteps {
         aup.setNameTextField(RandomStringUtils.randomAlphabetic(7));
     }
 
+    @When("I fill name text field with random string length (\\d+) on the Add User page")
+    public void iSetNameTextFieldRandomStringWithLengthAddUserPage(int stringLength) {
+        AddUserPage aup = new AddUserPage(TestContext.getDriver());
+        aup.setNameTextField(RandomStringUtils.randomAlphabetic(stringLength));
+    }
+
 
     @When("I set 'test.mail@mail.com' as email on the Add User page")
     public void iSetEmailAddUserPage() {
@@ -29,10 +35,24 @@ public class WhenSteps {
         TestContext.setTestData("user_email", email);
     }
 
+    @When("I fill email text field with random string length (\\d+) on the Add User page")
+    public void iSetEmailAddUserPage(int stringLength) {
+        AddUserPage aup = new AddUserPage(TestContext.getDriver());
+        String email = RandomStringUtils.randomAlphabetic(stringLength) + "@mail.com";
+        aup.setEmailTextField(email);
+        TestContext.setTestData("user_email", email);
+    }
+
     @When("I set 'test' as password on the Add User page")
     public void iSetPasswordAddUserPage() {
         AddUserPage aup = new AddUserPage(TestContext.getDriver());
         aup.setPasswordTextField("test");
+    }
+
+    @When("I fill password text field with random string length (\\d+) on the Add User page")
+    public void iSetPasswordAddUserPage(int passwordLength) {
+        AddUserPage aup = new AddUserPage(TestContext.getDriver());
+        aup.setPasswordTextField(RandomStringUtils.randomAlphabetic(passwordLength));
     }
 
     @When("I click on the 'Добавить пользователя' button on the Add User page")

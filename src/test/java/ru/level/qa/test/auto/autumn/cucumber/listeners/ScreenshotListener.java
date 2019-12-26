@@ -1,4 +1,4 @@
-package ru.level.qa.test.auto.autumn.cucumber;
+package ru.level.qa.test.auto.autumn.cucumber.listeners;
 
 import io.qameta.allure.Attachment;
 import java.io.File;
@@ -7,6 +7,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import ru.level.qa.test.auto.autumn.cucumber.TestContext;
 
 public class ScreenshotListener implements ITestListener {
 
