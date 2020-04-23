@@ -20,7 +20,7 @@
         <common.io.version>2.6</common.io.version>
         <rest-assured.version>4.1.1</rest-assured.version>
         <commons-lang3.version>3.9</commons-lang3.version>
-        <jackson.version>2.9.9.3</jackson.version>
+        <jackson.version>2.9.10.4</jackson.version>
         <postgresql.version>42.2.9</postgresql.version>
         <allure.version>2.13.0</allure.version>
         <aspectj.version>1.8.10</aspectj.version>
