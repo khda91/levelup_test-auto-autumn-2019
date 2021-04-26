@@ -17,7 +17,7 @@
         <selenium.version>3.141.59</selenium.version>
         <hamcrest.version>2.1</hamcrest.version>
         <webdrivermanager.version>3.7.1</webdrivermanager.version>
-        <common.io.version>2.6</common.io.version>
+        <common.io.version>2.7</common.io.version>
         <rest-assured.version>4.1.1</rest-assured.version>
         <commons-lang3.version>3.9</commons-lang3.version>
         <jackson.version>2.9.9.3</jackson.version>
